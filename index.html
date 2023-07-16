@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            width: 100%;
+            padding-left: 8%;
+            padding-right: 2%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+            margin: 30px 0;
+            cursor: pointer;
+        }
+        .menu-icon{
+            width: 30px;
+            cursor: pointer;
+            display: none;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 19px;
+ 
+        }
+        nav ul li a:hover{
+            color: rgb(133, 3, 3);
+            
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 100px 0;
+        }
+        .col-1{
+            flex-basis: 40%;
+            position: relative;
+            margin-left: 50px;
+
+        }
+        .col-1 h2{
+            font-size: 54px;
+        }
+        .col-1 h3{
+            font-size: 30px;
+            color: #707070;
+            font-weight: 100;
+            margin: 20px 0 10px;
+        }
+        .col-1 p{
+            font-size: 16px;
+            color: #b7b7b7;
+            font-weight: 100;
+        }
+        .col-1 h4{
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        .col-1 button{
+            width: 140px;
+            border: 0;
+            padding: 12px 10px;
+            outline: none;
+            background: linear-gradient(to right, rgb(164, 212, 252) ,rgb(0, 80, 253)) ;
+            border-radius: 6px;
+            cursor: pointer;
+        
+        }
+        .col-1 button:hover {
+            transform: scale(1.1);
+            transition-timing-function: linear;
+        }
+        .col-1::before{
+            content: '';
+            width:10px;
+            height: 57%;
+            background:linear-gradient(rgb(164, 212, 252) ,rgb(0, 80, 253));
+            position: absolute;
+            left: -40px;
+            top: 8px;
+        
+        }
+        .col-2{
+            position: relative;
+            flex-basis: 60%;
+            display: flex;
+            align-items: center;
+        }
+        .col-2 img{
+            width: 85%;
+            
+        }
+        .color-box{
+            position: absolute;
+            right:0;
+            top: 0;
+            width: 80%;
+            height: 100%;
+            z-index: -1;
+            transform: translate(150px);
+            border-radius: 10px;
+            background:linear-gradient(to right, rgb(164, 212, 252) ,rgb(0, 80, 253)) ;
+        }
+        .add img{
+            width: 35px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .add:hover img{
+            transform: scale(1.1);
+        }
+        .add{
+            text-align: center;
+            color: white;
+        }
+        .social img{
+            height: 13px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .social {
+            text-align: center;
+        }
+        .copyright{
+            background: black;
+            color: rgb(116, 116, 116);
+            margin: 0;
+            
+        }
+        @media only screen and (max-width: 720px){
+            nav ul{
+                width:100%;
+                background:linear-gradient(to right, rgb(164, 212, 252) ,rgb(0, 80, 253)) ;
+                position: absolute;
+                top: 75px;
+                right:0%;
+                z-index: -2;
+                margin-top: 20px;
+                overflow: hidden;
+                transition: 0.5s;
+                
+            }  
+            nav ul li{
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                align-items: center;
+                text-align: center;
+
+            }
+            nav ul li a {
+                color: rgb(255, 207, 207);
+            }
+            .menu-icon{
+                display: block;
+            }
+            .row{
+                
+                flex-direction: column-reverse;
+                margin: 50px 0;
+            } 
+            .col-2{
+                flex-basis: 100%;
+                margin: 50px 0;
+            }
+            .color-box{
+                transform: translateX(75px);
+            }
+            .col-2 img{
+                width: 70%;
+            }
+            .col-1{
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <nav>
+                <ul id="menulist">
+                    <li><a href="#"> PRODUCTS</a></li>
+                    <li><a href="#"> COSTUMER CARE</a></li>
+                    <li><a href="#"> CART</a></li>
+                </ul>
+            </nav>
+            <img src="menu.png" class="menu-icon" onclick="togglemenue()">
+        </div>    
+        <div class="row">
+            <div class="col-1">
+                <h2>PS4 V2 <br> Dualshock 4 </h2>
+                <h3>Wire Controller for PlayStation 4</h3>
+                <p>
+                    (compatable/Generic)
+                </p>
+                <h4>$24</h4>
+                <button type="button">Buy Now</button>
+            </div>
+            <div class="col-2">
+                <img src="controller.png" alt="" class="controller">
+                <div class="color-box"></div>
+                <div class="add">
+                    <img src="add.png" alt="">
+                    <p> <small>Add to Cart</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="social">
+            <img src="fb.png" alt="">
+            <img src="ig.png" alt="">
+            <img src="tw.png" alt="">
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p><samll>&copy; 2023 Sony Interactive Entertainment Europe Limited (SIEE)</samll></p>
+        All content, games titles, trade names and/or trade dress, trademarks, artwork and associated imagery are trademarks and/or copyright material of their respective owners. All rights reserved. More info
+    </div>
+    <script>
+        var menulist = document.getElementById("menulist")
+        menulist.style.maxHeight = "0px";
+        function togglemenue(){
+            if(menulist.style.maxHeight == "0px")
+            {
+                menulist.style.maxHeight = "150px";
+
+            }
+            else{
+                menulist.style.maxHeight = "0px";
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
